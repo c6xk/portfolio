@@ -3,69 +3,75 @@
 <html>
 
 <head>
-  <title>itsall@luv</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+   <title>itsall@luv</title>
+   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-  <div id="background"></div>
-  <div class="background">
-    <img src="/imagens/background.png">
-  </div>
-  <div class="layer2">
-    <img src="/imagens/chuva.gif">
-  </div>
-  <div class="layer3">
-    <img src="/imagens/cena1.gif">
-  </div>
+   <div id="background"></div>
+   <div class="background">
+     <img src="/imagens/background.png">
+   </div>
+   <div class="layer2">
+     <img src="/imagens/chuva.gif">
+   </div>
+   <div class="layer3">
+     <img src="/imagens/cena1.gif">
+   </div>
 
-  <div class="layer4">
-    <img class="imagem-hover" src="/imagens/JTnormal.gif" data-hover="/imagens/JTtalk.gif" alt="link Mw">
-    <div class="mensagem">-Jon I'm just an idealization of a source of admiration</div>
-  </div>
+   <div class="layer4">
+     <img class="imagem-hover" src="/imagens/JTnormal.gif" data-hover="/imagens/JTtalk.gif" alt="link Mw">
+     <div class="mensagem">-Jon I'm just an idealization of a source of admiration</div>
+   </div>
 
-  <div class="layer5">
-    <img class="imagem-hover" src="/imagens/Knormal.gif" data-hover="/imagens/K1.gif" alt="link Mw2">
-    <div class="mensagem">it was part of the plan</div>
-  </div>
+   <div class="layer5">
+     <img class="imagem-hover" src="/imagens/Knormal.gif" data-hover="/imagens/K1.gif" alt="link Mw2">
+     <div class="mensagem">it was part of the plan</div>
+   </div>
 
-  <div class="layer6">
-    <img class="imagem-hover" src="/imagens/Tnormal.gif" data-hover="/imagens/T1.gif" alt="link Mw3">
-    <div class="mensagem">reject everything</div>
-  </div>
+   <div class="layer6">
+     <img class="imagem-hover" src="/imagens/Tnormal.gif" data-hover="/imagens/T1.gif" alt="link Mw3">
+     <div class="mensagem">reject everything</div>
+   </div>
 
-  <div class="layer7">
+   <div class="layer7">
     <img src="/imagens/parede.png" alt="GIF 6">
-  </div>
+   </div>
   <!--<div class="layer9">
       <img class="imagem-hover" src="" data-hover="" alt="">
     </div>
   -->
-  <div class="layer10">
-    <img class="imagem-hover" src="/imagens/banner1.png" alt="Imagem 10">
-    <div class="mensagem">BANNER2</div>
-  </div>
+   <div class="layer10">
+     <img class="imagem-hover" src="/imagens/banner1.png">
+   </div>
 
-  <div class="layer11">
-    <img class="imagem-hover" src="imagens/banner222.gif" data-hover="/imagens/banner22.gif">
-    <div class="mensagem">BANNER2</div>
-  </div>
+   <div class="layer11">
+     <img class="imagem-hover" src="imagens/banner222.gif" data-hover="/imagens/banner222.gif">
+   </div>
 
   <div id="message-box"></div>
 
   <div class="layer12">
     <div class="button-container">
-      <a href="#" class="button1">
-        <img src="caminho/para/imagem1.jpg" alt="Botão 1" />
-      </a>
-      <a href="#" class="button2">
-        <img src="caminho/para/imagem2.jpg" alt="Botão 2" />
-      </a>
-      <a href="#" class="button3">
-        <img src="caminho/para/imagem3.jpg" alt="Botão 3" />
-      </a>
-    </div>
-  </div>
+      <a href="#" class="button">
+        <img src="/imagens/botao.png" alt="Botão 1" />
+</a></div></div>
+        
+<div class="layer13">
+  <div class="button-container">
+    <a href="#" class="button">
+      <img src="/imagens/botao.png" alt="Botão 1" />
+</a></div></div>
+
+<div class="layer14">
+  <div class="button-container">
+    <a href="#" class="button">
+      <img src="/imagens/botao.png" alt="Botão 1" />
+</a></div></div>
+
+
+
+  
 
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
@@ -152,18 +158,85 @@
     });
 
   </script>
-<div class="mouseimg"><img src="/imagens/mouseimg.png" alt=""></div>
+<div id="custom-cursor"></div>
+<div id="custom-cursor-click"></div>
+
 <style>
-  .mouseimg{
-    width: 300px;
-    height: 40px;
-    background-color: aliceblue;
-    cursor: default;
+  
+  #custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 42px;
+    height: 62px;
+    background-image: url("/imagens/mousem.png");
+    background-size: cover;
+    z-index: 9999;
+    visibility: hidden;
+  }
+  
+  #custom-cursor-click {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 42px;
+    height: 62px;
+    background-image: url("/imagens/mousec.png");
+    background-size: cover;
+    z-index: 9999;
+    visibility: hidden;
+  }
+  body {
+    cursor: none;
   }
 </style>
 
+<script>
+  window.addEventListener("mousemove", function(event) {
+    var customCursor = document.getElementById("custom-cursor");
+    customCursor.style.left = event.clientX + "px";
+    customCursor.style.top = event.clientY + "px";
+  });
 
+  window.addEventListener("mousedown", function(event) {
+    var customCursorClick = document.getElementById("custom-cursor-click");
+    customCursorClick.style.left = event.clientX + "px";
+    customCursorClick.style.top = event.clientY + "px";
+    customCursorClick.style.visibility = "visible";
+    
+    // Oculta o cursor personalizado principal durante o clique
+    var customCursor = document.getElementById("custom-cursor");
+    customCursor.style.visibility = "hidden";
+  });
+
+  window.addEventListener("mouseup", function(event) {
+    var customCursorClick = document.getElementById("custom-cursor-click");
+    customCursorClick.style.visibility = "hidden";
+    
+    // Mostra novamente o cursor personalizado principal após o clique
+    var customCursor = document.getElementById("custom-cursor");
+    customCursor.style.visibility = "visible";
+  });
+
+  document.body.addEventListener("mouseenter", function() {
+    var customCursor = document.getElementById("custom-cursor");
+    customCursor.style.visibility = "visible";
+  });
+
+  document.body.addEventListener("mouseleave", function() {
+    var customCursor = document.getElementById("custom-cursor");
+    customCursor.style.visibility = "hidden";
+  });
+</script>
+
+</script>
+
+</style>
+</style>
   <body style="overflow:hidden;"></body>
+  
 </body>
 
 </html>
