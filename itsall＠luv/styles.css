@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  padding: 0;  
+}
+.buttons-container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mensagem{
+  z-index: 999;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/imagens/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.imagem-hover:hover + .mensagem {
+  display: block;
+}
+
+
+.layer2 img { 
+  z-index: 2;
+  width: 10px;
+  height: auto;
+  position: relative;
+  top: -8px;
+  left: -15px;
+}
+
+.layer3 { 
+  z-index: 2;
+  width: 1004px;
+  height: auto;
+  position: relative;
+  top: 286px;
+  left: 25px;
+}
+
+.layer3 img {
+  z-index: 5;
+  width: 1555px;
+  height: auto;
+  position: relative;
+  top: -271px; 
+  left: 15px; 
+  transform: translate(0, 0); 
+}
+
+
+.layer4,
+.layer5,
+.layer6 {
+  z-index: 5;
+}
+
+.layer4 .imagem-hover,
+.layer5 .imagem-hover,
+.layer6 .imagem-hover,
+.layer11 .imagem-hover {
+  z-index: 6;
+  transition: all 0.5s ease;
+  width: 100px;
+  height: auto;
+  position: relative;
+}
+
+.layer4 .imagem-hover{ 
+  cursor: pointer;
+  width: 348px;
+  height: auto;
+  position: relative;
+  top: -720px;
+  left: 430px;
+  
+  
+}
+.layer5 .imagem-hover{ 
+  cursor: pointer;
+  width: 425px;
+  height: auto;
+  position: relative;
+  top: -1217px;
+  left: 860px;
+  
+}
+.layer6 .imagem-hover { 
+  cursor: pointer;
+  width: 320px;
+  height: auto;
+  position: relative;
+  top: -1537px;
+  left: 690px;
+  
+}
+
+.layer4 .mensagem {
+  position: fixed;
+  display: none;
+  background-color: #4d3d63;
+  padding: 5px;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+
+.layer5 .mensagem {
+  position: fixed;
+  display: none;
+  background-color: #888888;
+  padding: 5px;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+.layer6 .mensagem {
+  position: fixed;
+  display: none;
+  background-color: #888888;
+  padding: 5px;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+.layer11{
+  z-index: 6;
+}
+.layer11.mensagem{
+  position: fixed;
+  display: none;
+  background-color: #888888;
+  padding: 5px;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+
+.layer7 img {
+  z-index: 5;
+  width: 1558px;
+  height: auto;
+  position: relative;
+  top: -2156px;
+  left: 40px;
+}
+
+.layer8 {
+  z-index: 8;
+  width: 1543px;
+  height: auto;
+  position: relative;
+  top: 25px; 
+  left: 25px;
+}
+
+.layer8 img {
+  opacity: 0.3;
+}
+
+.layer9 {
+  z-index: 9;
+  width: 1543px;
+  height: auto;
+  position: relative;
+  top: 25px; 
+  left: 25px;
+}
+
+.layer10 {
+  z-index: 10;
+  transform: scale(0.3);
+  position: absolute; 
+  top: -50px; 
+  left: -69px;
+}
+
+
+.layer11 {
+  z-index: 11;
+  transform: scale(0.3);
+  position: absolute; 
+  top: 50px; 
+  left: 1100px;
+}
+.layer11 .mensagem {
+  position: fixed;
+  display: none;
+  background-color: #4d3d63;
+  padding: 5px;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+
+.layer12 {
+  z-index: 12;
+  width: 1543px;
+  height: auto;
+  position: relative;
+  top: -3010px; 
+  left: -560px;
+  
+}
+
+.layer13 {
+  z-index: 13;
+  width: 1543px;
+  height: auto;
+  position: relative;
+  top: 25px; 
+  left: 25px;
+}
+
+.layer14 {
+  z-index: 14;
+  width: 1543px;
+  height: auto;
+  position: relative;
+  top: 25px; 
+  left: 25px;
+}
+
+.button {
+  z-index: 99999;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  cursor: pointer;
+  color: #ffffff;
+  margin-right: 10px;
+  margin: 0;
+}
+
+.layer8{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-between;
+  top: -2005px; 
+  left: 25px;
+}
+
+.message-box {
+  position: absolute;
+  top: 50px;
+  left: 820px;
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  padding: 10px;
+  display: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Para espaçamento igual entre os botões */
+  align-items: center; /* Para centralizar verticalmente */
+}
+.image-button {
+  display: inline-block;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.image-button img {
+  width: 50%;
+  height: auto;
+}
+
+.image-button:hover {
+  background-color: #ddd;
+}
+

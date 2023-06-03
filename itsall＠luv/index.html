@@ -1,0 +1,169 @@
+<!-- arquivo principal.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>itsall@luv</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div id="background"></div>
+  <div class="background">
+    <img src="/imagens/background.png">
+  </div>
+  <div class="layer2">
+    <img src="/imagens/chuva.gif">
+  </div>
+  <div class="layer3">
+    <img src="/imagens/cena1.gif">
+  </div>
+
+  <div class="layer4">
+    <img class="imagem-hover" src="/imagens/JTnormal.gif" data-hover="/imagens/JTtalk.gif" alt="link Mw">
+    <div class="mensagem">-Jon I'm just an idealization of a source of admiration</div>
+  </div>
+
+  <div class="layer5">
+    <img class="imagem-hover" src="/imagens/Knormal.gif" data-hover="/imagens/K1.gif" alt="link Mw2">
+    <div class="mensagem">it was part of the plan</div>
+  </div>
+
+  <div class="layer6">
+    <img class="imagem-hover" src="/imagens/Tnormal.gif" data-hover="/imagens/T1.gif" alt="link Mw3">
+    <div class="mensagem">reject everything</div>
+  </div>
+
+  <div class="layer7">
+    <img src="/imagens/parede.png" alt="GIF 6">
+  </div>
+  <!--<div class="layer9">
+      <img class="imagem-hover" src="" data-hover="" alt="">
+    </div>
+  -->
+  <div class="layer10">
+    <img class="imagem-hover" src="/imagens/banner1.png" alt="Imagem 10">
+    <div class="mensagem">BANNER2</div>
+  </div>
+
+  <div class="layer11">
+    <img class="imagem-hover" src="imagens/banner222.gif" data-hover="/imagens/banner22.gif">
+    <div class="mensagem">BANNER2</div>
+  </div>
+
+  <div id="message-box"></div>
+
+  <div class="layer12">
+    <div class="button-container">
+      <a href="#" class="button1">
+        <img src="caminho/para/imagem1.jpg" alt="Botão 1" />
+      </a>
+      <a href="#" class="button2">
+        <img src="caminho/para/imagem2.jpg" alt="Botão 2" />
+      </a>
+      <a href="#" class="button3">
+        <img src="caminho/para/imagem3.jpg" alt="Botão 3" />
+      </a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      var imagensHover = document.querySelectorAll('.imagem-hover');
+
+      imagensHover.forEach(function (imagem) {
+        var imagemNormal = imagem.getAttribute('src');
+        var novaImagem = imagem.getAttribute('data-hover');
+
+        imagem.addEventListener('mouseover', function () {
+          trocarImagem(imagem, novaImagem);
+        });
+
+        imagem.addEventListener('mouseout', function () {
+          trocarImagem(imagem, imagemNormal);
+        });
+      });
+
+      function trocarImagem(imagem, novaImagem) {
+        imagem.src = novaImagem;
+      }
+    });
+
+    var mensagemHover = document.getElementsByClassName('mensagem-hover');
+    var imagensHover = document.querySelectorAll('.imagem-hover');
+
+    imagensHover.forEach(function (imagem) {
+      imagem.addEventListener('mouseover', function (event) {
+        var mensagem = imagem.nextElementSibling;
+        mensagem.style.display = 'block';
+      });
+
+      imagem.addEventListener('mouseout', function (event) {
+        var mensagem = imagem.nextElementSibling;
+        mensagem.style.display = 'none';
+      });
+
+      document.addEventListener('mousemove', function (event) {
+        var mensagem = imagem.nextElementSibling;
+        var x = event.clientX + 20;
+        var y = event.clientY + 20;
+        mensagem.style.left = x + 'px';
+        mensagem.style.top = y + 'px';
+      });
+    });
+  </script>
+
+<!-- botoes-->
+  <script>
+    var button1 = document.getElementById('button1');
+    var button2 = document.getElementById('button2');
+    var layer7 = document.querySelector('.layer7');
+    var layer4Gif = document.querySelector('.layer4 .imagem-hover');
+
+    var button1Active = false;
+    var button2Active = false;
+    var layer7Transparency = true;
+
+    button1.addEventListener('click', function () {
+      button1Active = !button1Active;
+
+      if (button1Active) {
+        layer7.classList.remove('transparency');
+      } else {
+        layer7.classList.add('transparency');
+      }
+
+      if (button2Active && !layer7Transparency) {
+        layer4Gif.src = 'caminho_do_gif_alternativo.gif';
+        setTimeout(function () {
+          layer4Gif.src = 'caminho_original_do_gif.gif';
+        }, 5000);
+      }
+    });
+
+    button2.addEventListener('click', function () {
+      button2Active = !button2Active;
+      if (button2Active) {
+        layer7.classList.add('transparency');
+      } else {
+        layer7.classList.remove('transparency');
+      }
+      layer7Transparency = button2Active;
+    });
+
+  </script>
+<div class="mouseimg"><img src="/imagens/mouseimg.png" alt=""></div>
+<style>
+  .mouseimg{
+    width: 300px;
+    height: 40px;
+    background-color: aliceblue;
+    cursor: default;
+  }
+</style>
+
+
+  <body style="overflow:hidden;"></body>
+</body>
+
+</html>
