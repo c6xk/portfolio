@@ -1,242 +1,142 @@
-<!-- arquivo principal.html -->
 <!DOCTYPE html>
 <html>
 
 <head>
-   <title>itsall@luv</title>
-   <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>itsall@luv</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/modal.css">
+  <link rel="stylesheet" type="text/css" href="/css/cursor.css">
+  <link rel="stylesheet" type="text/css" href="/css/msg.css">
+
 </head>
 
 <body>
-   <div id="background"></div>
-   <div class="background">
-     <img src="/imagens/background.png">
-   </div>
+  <div id="background"></div>
+
+  <div class="background">
+    <img src="/img/background.png">
+  </div> 
+
    <div class="layer2">
-     <img src="/imagens/chuva.gif">
-   </div>
-   <div class="layer3">
-     <img src="/imagens/cena1.gif">
-   </div>
+    <img src="/img/cena1.gif">
+  </div>
 
-   <div class="layer4">
-     <img class="imagem-hover" src="/imagens/JTnormal.gif" data-hover="/imagens/JTtalk.gif" alt="link Mw">
-     <div class="mensagem">-Jon I'm just an idealization of a source of admiration</div>
-   </div>
+  <div class="layer3">
+    <img src="/img/chuva.gif">
+  </div>
 
-   <div class="layer5">
-     <img class="imagem-hover" src="/imagens/Knormal.gif" data-hover="/imagens/K1.gif" alt="link Mw2">
-     <div class="mensagem">it was part of the plan</div>
-   </div>
 
-   <div class="layer6">
-     <img class="imagem-hover" src="/imagens/Tnormal.gif" data-hover="/imagens/T1.gif" alt="link Mw3">
-     <div class="mensagem">reject everything</div>
-   </div>
+  <div class="layer4">
+    <a href="#" onclick="openModal(1); return false;">
+      <img class="imagem-hover" src="/img/JTnormal.gif" data-hover="/img/JTtalk.gif" alt="link Mw">
+      
+    </a>
+    <div class="mensagem">Mensagem Hover</div>
+  </div>
 
-   <div class="layer7">
-    <img src="/imagens/parede.png" alt="GIF 6">
-   </div>
+  <div class="layer5">
+    <a href="#" onclick="openModal(2); return false;">
+      <img class="imagem-hover" src="/img/Knormal.gif" data-hover="/img/K1.gif" alt="link Mw2"
+      data-message="Koji">
+    </a>
+    
+  </div>
+
+  <div class="layer6">
+    <a href="#" onclick="openModal(3); return false;">
+      <img class="imagem-hover" src="/img/Tnormal.gif" data-hover="/img/T1.gif" alt="link Mw3"
+      data-message="Koji">
+    </a>
+  </div>
+
+  <div class="layer7">
+    <img src="/img/parede.png" alt="GIF 6">
+  </div>
   <!--<div class="layer9">
       <img class="imagem-hover" src="" data-hover="" alt="">
     </div>
   -->
-   <div class="layer10">
-     <img class="imagem-hover" src="/imagens/banner1.png">
-   </div>
+  <div class="layer10">
+    <img class="imagem-hover" src="/img/banner1.png">
+  </div>
 
-   <div class="layer11">
-     <img class="imagem-hover" src="imagens/banner222.gif" data-hover="/imagens/banner222.gif">
-   </div>
+  <div class="layer11">
+    <img class="imagem-hover" src="img/banner222.gif" data-hover= "/img/banner22.gif">
+  </div>
 
-  <div id="message-box"></div>
 
   <div class="layer12">
     <div class="button-container">
       <a href="#" class="button">
-        <img src="/imagens/botao.png" alt="Botão 1" />
-</a></div></div>
-        
-<div class="layer13">
-  <div class="button-container">
-    <a href="#" class="button">
-      <img src="/imagens/botao.png" alt="Botão 1" />
-</a></div></div>
+        <img src="/img/botao.png" alt="Botão 1" />
+      </a>
+    </div>
+  </div>
 
-<div class="layer14">
-  <div class="button-container">
-    <a href="#" class="button">
-      <img src="/imagens/botao.png" alt="Botão 1" />
-</a></div></div>
+  <div class="layer13">
+    <div class="button-container">
+      <a href="#" class="button">
+        <img src="/img/botao.png" alt="Botão 1" />
+      </a>
+    </div>
+  </div>
+
+  <div class="layer14">
+    <div class="button-container">
+      <a href="#" class="button">
+        <img src="/img/botao.png" alt="Botão 1" />
+      </a>
+    </div>
+  </div>
 
 
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>Conteúdo da mensagem...</p>
+    </div>
+  </div>
 
+  <div id="myModal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(1)">&times;</span>
+      <p>1</p>
+    </div>
+  </div>
+
+  <div id="myModal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(2)">&times;</span>
+      <p>2</p>
+    </div>
+  </div>
+
+  <div id="myModal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(3)">&times;</span>
+      <p>3</p>
+    </div>
+  </div>
+
+  <div class="container1">
+    <div class="overlay"></div>
+    <img src="/img/vidro.png" alt="Imagem">
+  </div>
   
 
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      var imagensHover = document.querySelectorAll('.imagem-hover');
+  <!--scripts-->
+  <script src="/js/modalS.js"></script>
+  <script src="/js/botoesS.js"></script>
+  <script src="/js/cursor.js"></script>
+  <script src="/js/imagemhover.js"></script>
+  <script src="/js/msg.js"></script>
 
-      imagensHover.forEach(function (imagem) {
-        var imagemNormal = imagem.getAttribute('src');
-        var novaImagem = imagem.getAttribute('data-hover');
+  <!--scripts-->
 
-        imagem.addEventListener('mouseover', function () {
-          trocarImagem(imagem, novaImagem);
-        });
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-click"></div>
 
-        imagem.addEventListener('mouseout', function () {
-          trocarImagem(imagem, imagemNormal);
-        });
-      });
-
-      function trocarImagem(imagem, novaImagem) {
-        imagem.src = novaImagem;
-      }
-    });
-
-    var mensagemHover = document.getElementsByClassName('mensagem-hover');
-    var imagensHover = document.querySelectorAll('.imagem-hover');
-
-    imagensHover.forEach(function (imagem) {
-      imagem.addEventListener('mouseover', function (event) {
-        var mensagem = imagem.nextElementSibling;
-        mensagem.style.display = 'block';
-      });
-
-      imagem.addEventListener('mouseout', function (event) {
-        var mensagem = imagem.nextElementSibling;
-        mensagem.style.display = 'none';
-      });
-
-      document.addEventListener('mousemove', function (event) {
-        var mensagem = imagem.nextElementSibling;
-        var x = event.clientX + 20;
-        var y = event.clientY + 20;
-        mensagem.style.left = x + 'px';
-        mensagem.style.top = y + 'px';
-      });
-    });
-  </script>
-
-<!-- botoes-->
-  <script>
-    var button1 = document.getElementById('button1');
-    var button2 = document.getElementById('button2');
-    var layer7 = document.querySelector('.layer7');
-    var layer4Gif = document.querySelector('.layer4 .imagem-hover');
-
-    var button1Active = false;
-    var button2Active = false;
-    var layer7Transparency = true;
-
-    button1.addEventListener('click', function () {
-      button1Active = !button1Active;
-
-      if (button1Active) {
-        layer7.classList.remove('transparency');
-      } else {
-        layer7.classList.add('transparency');
-      }
-
-      if (button2Active && !layer7Transparency) {
-        layer4Gif.src = 'caminho_do_gif_alternativo.gif';
-        setTimeout(function () {
-          layer4Gif.src = 'caminho_original_do_gif.gif';
-        }, 5000);
-      }
-    });
-
-    button2.addEventListener('click', function () {
-      button2Active = !button2Active;
-      if (button2Active) {
-        layer7.classList.add('transparency');
-      } else {
-        layer7.classList.remove('transparency');
-      }
-      layer7Transparency = button2Active;
-    });
-
-  </script>
-<div id="custom-cursor"></div>
-<div id="custom-cursor-click"></div>
-
-<style>
-  
-  #custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    width: 42px;
-    height: 62px;
-    background-image: url("/imagens/mousem.png");
-    background-size: cover;
-    z-index: 9999;
-    visibility: hidden;
-  }
-  
-  #custom-cursor-click {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    width: 42px;
-    height: 62px;
-    background-image: url("/imagens/mousec.png");
-    background-size: cover;
-    z-index: 9999;
-    visibility: hidden;
-  }
-  body {
-    cursor: none;
-  }
-</style>
-
-<script>
-  window.addEventListener("mousemove", function(event) {
-    var customCursor = document.getElementById("custom-cursor");
-    customCursor.style.left = event.clientX + "px";
-    customCursor.style.top = event.clientY + "px";
-  });
-
-  window.addEventListener("mousedown", function(event) {
-    var customCursorClick = document.getElementById("custom-cursor-click");
-    customCursorClick.style.left = event.clientX + "px";
-    customCursorClick.style.top = event.clientY + "px";
-    customCursorClick.style.visibility = "visible";
-    
-    // Oculta o cursor personalizado principal durante o clique
-    var customCursor = document.getElementById("custom-cursor");
-    customCursor.style.visibility = "hidden";
-  });
-
-  window.addEventListener("mouseup", function(event) {
-    var customCursorClick = document.getElementById("custom-cursor-click");
-    customCursorClick.style.visibility = "hidden";
-    
-    // Mostra novamente o cursor personalizado principal após o clique
-    var customCursor = document.getElementById("custom-cursor");
-    customCursor.style.visibility = "visible";
-  });
-
-  document.body.addEventListener("mouseenter", function() {
-    var customCursor = document.getElementById("custom-cursor");
-    customCursor.style.visibility = "visible";
-  });
-
-  document.body.addEventListener("mouseleave", function() {
-    var customCursor = document.getElementById("custom-cursor");
-    customCursor.style.visibility = "hidden";
-  });
-</script>
-
-</script>
-
-</style>
-</style>
-  <body style="overflow:hidden;"></body>
-  
 </body>
 
 </html>
