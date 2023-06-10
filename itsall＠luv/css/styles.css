@@ -69,8 +69,6 @@ body {
   position: absolute;
 }
 
-
-
 .layer4 .imagem-hover,
 .layer5 .imagem-hover,
 .layer6 .imagem-hover {
@@ -83,30 +81,36 @@ body {
 
 .layer4 .imagem-hover {
   cursor: pointer;
-  width: 348px;
-  top: 177px;
-  left: 420px;
+  width: 260px;
+  top: 217px;
+  left: 495px;
 }
 
 .layer5 .imagem-hover {
   cursor: pointer;
-  width: 425px;
-  top: 196px;
-  left: 843px;
+  width: 275px;
+  top: 342px;
+  left: 940px;
 }
 
 .layer6 .imagem-hover {
   cursor: pointer;
-  width: 320px;
-  top: 353px;
-  left: 720px;
+  width: 260px;
+  top: 402px;
+  left: 740px;
 }
 
-.layer8,
-.layer9 {
+.layer8 {
   width: 1543px;
   top: 25px;
   left: 25px;
+}
+
+.layer9 img {
+  z-index: 999;
+  width: 200px;
+  top: 240px;
+  left: 1130px;
 }
 
 .layer8 img {
@@ -195,20 +199,22 @@ body {
 }
 
 .image-button:hover {
-  background-color: #dddddd00;
+  background-color: #dddddd23;
 }
 .container1 img{
-  z-index: 999;
+  opacity: 0.3;
+  z-index: 99;
   position: absolute;
-  width: 800px;
+  width: 782px;
   height: auto;
-  top: 190px;
-  left: 490px;
+  top: 205px;
+  left: 472px;
   pointer-events: none;
+  
 }
-
 
 .container:hover .overlay {
  
   background-color: rgba(0, 0, 0, 0.5); /* Define a cor de fundo transparente com opacidade */
 }
+

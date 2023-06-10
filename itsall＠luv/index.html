@@ -4,9 +4,9 @@
 <head>
   <title>itsall@luv</title>
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/botoes.css">
   <link rel="stylesheet" type="text/css" href="/css/modal.css">
   <link rel="stylesheet" type="text/css" href="/css/cursor.css">
-  <link rel="stylesheet" type="text/css" href="/css/msg.css">
 
 </head>
 
@@ -22,16 +22,14 @@
   </div>
 
   <div class="layer3">
-    <img src="/img/chuva.gif">
+    <img id="chuvaE" src="/img/chuva.gif">
   </div>
 
 
   <div class="layer4">
     <a href="#" onclick="openModal(1); return false;">
-      <img class="imagem-hover" src="/img/JTnormal.gif" data-hover="/img/JTtalk.gif" alt="link Mw">
-      
+      <img class="imagem-hover" src="/img/JTnormal.gif" data-hover="/img/JTtalk.gif" alt="link Mw"> 
     </a>
-    <div class="mensagem">Mensagem Hover</div>
   </div>
 
   <div class="layer5">
@@ -45,94 +43,117 @@
   <div class="layer6">
     <a href="#" onclick="openModal(3); return false;">
       <img class="imagem-hover" src="/img/Tnormal.gif" data-hover="/img/T1.gif" alt="link Mw3"
-      data-message="Koji">
+      data-message="torch">
     </a>
   </div>
 
   <div class="layer7">
     <img src="/img/parede.png" alt="GIF 6">
   </div>
-  <!--<div class="layer9">
-      <img class="imagem-hover" src="" data-hover="" alt="">
-    </div>
-  -->
+  
+    <div class="layer9">
+      <a href="#" onclick="openModal(4); return false;">
+      <img class="imagem-hover" src="/img/euN.gif" data-hover="/img/euT.gif" alt="">
+      </a>
+  </div>
+  
   <div class="layer10">
-    <img class="imagem-hover" src="/img/banner1.png">
+    <a href="#" onclick="openModal(5); return false;">
+    <img class="imagem-hover" src="/img/banner1.png" data-hover="" alt="">
+    </a>
   </div>
 
   <div class="layer11">
+    <a href="#" onclick="openModal(6); return false;">
     <img class="imagem-hover" src="img/banner222.gif" data-hover= "/img/banner22.gif">
+  </a>
   </div>
 
 
-  <div class="layer12">
-    <div class="button-container">
-      <a href="#" class="button">
+  <div id="button1">
+      <a href="#" class="button1">
         <img src="/img/botao.png" alt="Botão 1" />
+      </a>
+    </div>
+
+    <div id="button2">
+      <a href="#"  class="button2">
+        <img src="/img/botao.png" alt="Botão 2" />
       </a>
     </div>
   </div>
 
-  <div class="layer13">
-    <div class="button-container">
-      <a href="#" class="button">
-        <img src="/img/botao.png" alt="Botão 1" />
+    <div id="button3">
+      <a href="#" class="button3">
+        <img src="/img/botao.png" alt="Botão 3" />
       </a>
     </div>
+
+  <div id="vidroE" class="container1">
+    <img id="imagem" src="/img/vidro.gif" alt="Imagem">
   </div>
+  
 
-  <div class="layer14">
-    <div class="button-container">
-      <a href="#" class="button">
-        <img src="/img/botao.png" alt="Botão 1" />
-      </a>
-    </div>
-  </div>
-
-
-  <!-- Modal -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <p>Conteúdo da mensagem...</p>
-    </div>
-  </div>
-
+<!-- Modal -->
   <div id="myModal1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal(1)">&times;</span>
-      <p>1</p>
+      <h1>Jon </h1>
+      <p>I can feel you in my dreams</p>
     </div>
   </div>
 
   <div id="myModal2" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal(2)">&times;</span>
-      <p>2</p>
+      <h1>Kouji </h1>
+      <p>Conteúdo</p>
     </div>
   </div>
 
   <div id="myModal3" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal(3)">&times;</span>
-      <p>3</p>
+        <h1>Torch </h1>
+        <p>Conteúdo</p>
+      </div>
     </div>
   </div>
 
-  <div class="container1">
-    <div class="overlay"></div>
-    <img src="/img/vidro.png" alt="Imagem">
+  <div id="myModal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(4)">&times;</span>
+      <h1>Fernanda </h1>
+      <p>Conteúdo</p>
+    </div>
   </div>
-  
 
-  <!--scripts-->
+  <div id="myModal5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(5)">&times;</span>
+      <h1>INTJ </h1>
+      <p>Conteúdo</p>
+    </div>
+  </div>
+
+  <div id="myModal6" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(6)">&times;</span>
+      <h1>Ódio </h1>
+      <p>Conteúdo</p>
+    </div>
+  </div>
+<!-- Modal -->
+
+
+<!--scripts-->
   <script src="/js/modalS.js"></script>
   <script src="/js/botoesS.js"></script>
+  <script src="/js/botoes.js"></script>
   <script src="/js/cursor.js"></script>
   <script src="/js/imagemhover.js"></script>
   <script src="/js/msg.js"></script>
-
-  <!--scripts-->
+<!--scripts-->
 
   <div id="custom-cursor"></div>
   <div id="custom-cursor-click"></div>

@@ -1,19 +1,19 @@
-
-    function openModal(modalId) {
-      var modal = document.getElementById("myModal" + modalId);
+ function openModal(modalNumber) {
+      var modal = document.getElementById("myModal" + modalNumber);
       modal.style.display = "block";
     }
 
-    function closeModal(modalId) {
-      var modal = document.getElementById("myModal" + modalId);
+    // Função para fechar o modal
+    function closeModal(modalNumber) {
+      var modal = document.getElementById("myModal" + modalNumber);
       modal.style.display = "none";
     }
 
-    window.addEventListener("click", function(event) {
-      var modals = document.getElementsByClassName("modal");
-      for (var i = 0; i < modals.length; i++) {
-        if (event.target == modals[i]) {
-          modals[i].style.display = "none";
-        }
+    // Função para fechar o modal ao clicar fora dele
+    window.onclick = function(event) {
+      if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
       }
-    });
+    };
+
+

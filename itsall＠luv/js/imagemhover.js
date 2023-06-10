@@ -19,25 +19,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
-  var mensagemHover = document.getElementsByClassName('mensagem-hover');
-  var imagensHover = document.querySelectorAll('.imagem-hover');
-
-  imagensHover.forEach(function (imagem) {
-    imagem.addEventListener('mouseover', function (event) {
-      var mensagem = imagem.nextElementSibling;
-      mensagem.style.display = 'block';
-    });
-
-    imagem.addEventListener('mouseout', function (event) {
-      var mensagem = imagem.nextElementSibling;
-      mensagem.style.display = 'none';
-    });
-
-    document.addEventListener('mousemove', function (event) {
-      var mensagem = imagem.nextElementSibling;
-      var x = event.clientX + 20;
-      var y = event.clientY + 20;
-      mensagem.style.left = x + 'px';
-      mensagem.style.top = y + 'px';
-    });
-  });
