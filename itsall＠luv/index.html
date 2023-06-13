@@ -21,7 +21,7 @@
     <img src="/img/cena1.gif">
   </div>
 
-  <div class="layer3">
+  <div class="layer3" id="chuva">
     <img id="chuvaE" src="/img/chuva.gif">
   </div>
 
@@ -145,14 +145,29 @@
   </div>
 <!-- Modal -->
 
+<!-- music player -->
+<div class="layer14">
+<audio id="audioPlayer" controls>
+  <source id="audioSource" type="audio/mpeg">
+</audio>
+
+<button onclick="previousSong()">Anterior</button>
+<button onclick="togglePlay()">Play/Pause</button>
+<button onclick="nextSong()">Próxima</button>
+</div>
+<!-- music player -->
 
 <!--scripts-->
   <script src="/js/modalS.js"></script>
   <script src="/js/botoesS.js"></script>
-  <script src="/js/botoes.js"></script>
+  <script src="/js/button1.js"></script>
+  <script src="/js/button2.js"></script>
   <script src="/js/cursor.js"></script>
   <script src="/js/imagemhover.js"></script>
   <script src="/js/msg.js"></script>
+  <script src="/js/musicplayer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.3.1/howler.min.js"></script>
+
 <!--scripts-->
 
   <div id="custom-cursor"></div>
