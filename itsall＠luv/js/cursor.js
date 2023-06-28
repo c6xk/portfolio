@@ -2,6 +2,7 @@ window.addEventListener("mousemove", function(event) {
   var customCursor = document.getElementById("custom-cursor");
   customCursor.style.left = event.clientX + "px";
   customCursor.style.top = event.clientY + "px";
+  
 });
 
 window.addEventListener("mousedown", function(event) {
@@ -31,3 +32,5 @@ document.body.addEventListener("mouseleave", function() {
   var customCursor = document.getElementById("custom-cursor");
   customCursor.style.visibility = "hidden";
 });
+
+
