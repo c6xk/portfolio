@@ -43,9 +43,9 @@ allMusic = [
     },
 
     {
-      name: "let me try",
-      artist: "join me",
-      src: "No, you cant"
+      name: "Fix you",
+      artist: "Coldplay",
+      src: "Coldplay - Fix You"
     },
     
     {
